@@ -1,106 +1,116 @@
 #!/bin/bash
 
-# Encoded script using base64
-ENCODED_SCRIPT="IyEvYmluL2Jhc2gKCiMgQ29sb3JzIGZvciBvdXRwdXQKUkVEPSdcdDAzM1swOzMx
-bScKR1JFRU49J1x0MDMzWzA7MzJtJwpZRUxMT1c9J1x0MDMzWzE7MzNtJwpOQz0n
-XHQwMzNbMG0nICMgTm8gQ29sb3IKCmVjaG8gLWUgIiR7WUVMTE9XfT09PT09PT09
-PT09PT09PT09PT09PT09PT09PT09PT09PT0ke05DfSIKZWNobyAtZSAiJHtHUkVF
-Tn0gICAgICAgRmVsaXggUGFuZWwgSW5zdGFsbGVyIFBST1RFWCB2MS41LjMgICAgICAg
-ICB7JE5DfSIKZWNobyAtZSAiJHtZRUxMT1d9PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09JHtOQ30iCmVjaG8gIiIKZWNobyAiU2NyaXB0IGluaSBha2Fu
-IG1lbmdpbnN0YWxsIFBST1RFWCBQYW5lbCBBbmRhLiIKZWNobyAiSkFOR0FOIERJ
-IEJBR0lLQU4gR0VSQVRJUyBLT0RFIElOSS4uIgplY2hvICIiCmVjaG8gLWUgIiR7
-WUVMTE9XfVBlcnNpYXBhbiB5YW5nIGFrYW4gZGl0YW5nYWthbjoiCiR7TkN9Igpl
-Y2hvICIxLiBVcGRhdGUgc3lzdGVtIHBhY2thZ2VzIgplY2hvICIyLiBJbnN0YWxs
-IGRlcGVuZGVuY2llcyAoTm9kZS5qcyAxNiwgWWFybiwgZGxsKSIKZWNobyAiMy4g
-RG93bmxvYWQgUFJPVEVYIFYxLjUuMyIKZWNobyAiNC4gRXh0cmFjdCBkYW4gc2V0
-dXAgcGFuZWwiCmVjaG8gIjUuIEJ1aWxkIGFzc2V0cyBkZW5nYW4gWWFybiIKZWNo
-byAiNi4gUmVzdGFydCBzZXJ2aWNlcyAobmdpbngsIHBocC1mbXApIgplY2hvICIi
-CgojIEFzayBmb3IgY29uZmlybWF0aW9uCnJlYWQgLXAgIkFwYWthaCBBbmRhIGlu
-Z2luIG1lbGFuand0a2FuIGluc3RhbGFzaT8gKFkvTik6ICIgLW4gMSAtcgplY2hv
-ICIiCmVjaG8gIiIKCmlmIFtbICEgJFJFUExZID1+XiBbWVldJCBdXTsgdGhlbgog
-ICAgZWNobyAtZSAiJHtSRUR9SW5zdGFsYXNpIGRpYmF0YWxrYW4uJHtOQ30iCiAg
-ICBleGl0IDEKZmkKCmVjaG8gLWUgIiR7R1JFRU59TWVtdWxhaSBpbnN0YWxhc2ku
-Li4iCiR7TkN9IgplY2hvICIiCgojIEZ1bmN0aW9uIHRvIGNoZWNrIGlmIGEgY29t
-bWFuZCB3YXMgc3VjY2Vzc2Z1bApjaGVja19zdGF0dXMoKSB7CiAgICBpZiBbICQ/
-IC1lcSAwIF07IHRoZW4KICAgICAgICBlY2hvIC1lICIke0dSRUVOfVvihpVdICQx
-IGJlcmhhc2lsJHtOQ30iCiAgICBlbHNlCiAgICAgICAgZWNobyAtZSAiJHtSRUR9
-W+KGlV0gJDEgZ2FnYWwke05DfSIKICAgICAgICBlY2hvIC1lICIke1lFTExPV31M
-YW5qdXRrYW4gaW5zdGFsYXNpPyAoWS9OKTogJHtOQ30iCiAgICAgICAgcmVhZCAt
-biAxIC1yCiAgICAgICAgZWNobyAiIgogICAgICAgIGlmIFtbICEgJFJFUExZID1+
-XiBbWVldJCBdXTsgdGhlbgogICAgICAgICAgICBlY2hvIC1lICIke1JFRH1JbnN0
-YWxhc2kgZGliYXRhbGthbi4ke05DfSIKICAgICAgICAgICAgZXhpdCAxCiAgICAg
-ICAgZmkKICAgIGZpCn0KCiMgU3RlcCAxOiBVcGRhdGUgc3lzdGVtCmVjaG8gLWUg
-IiR7WUVMTE9XfVsxLzZdIE1lbXBlcmJhcnVpIHBha2V0IHNpc3RlbS4uLiR7TkN9
-IgphcHQgdXBkYXRlIC15CmNoZWNrX3N0YXR1cyAiVXBkYXRlIHNpc3RlbSIKCiMg
-U3RlcCAyOiBJbnN0YWxsIGRlcGVuZGVuY2llcwplY2hvIC1lICIke1lFTExPV31b
-Mi82XSBNZW5naW5zdGFsIGRlcGVuZGVuc2kuLi4iCiR7TkN9IgphcHQgaW5zdGFs
-bCAteSBqcSB1bnppcCBjdXJsIGdpdCBjYS1jZXJ0aWZpY2F0ZXMgZ251cGcKY2hl
-Y2tfc3RhdHVzICJJbnN0YWxsIGJhc2ljIGRlcGVuZGVuY2llcyIKCiMgSW5zdGFs
-bCBOb2RlLmpzIDE2CmVjaG8gLWUgIiR7WUVMTE9XfSAgIC0+IE1lbmdpbnN0YWwg
-Tm9kZS5qcyAxNi4uLiR7TkN9IgpjdXJsIC1mc1NMIGh0dHBzOi8vZGViLm5vZGVz
-b3VyY2UuY29tL3NldHVwXzE2LnggfCBiYXNoIC0KYXB0IGluc3RhbGwgLXkgbm9k
-ZWpzCmNoZWNrX3N0YXR1cyAiSW5zdGFsbCBOb2RlLmpzIDE2IgoKIyBJbnN0YWxs
-IFlhcm4KZWNobyAtZSAiJHtZRUxMT1d9ICAgLT4gTWVuZ2luc3RhbCBZYXJuLi4u
-JHtOQ30iCm5wbSBpbnN0YWxsIC1nIHlhcm4KY2hlY2tfc3RhdHVzICJJbnN0YWxs
-IFlhcm4iCgojIFN0ZXAgMzogRG93bmxvYWQgRmVsaXggUGFuZWwKZWNobyAtZSAi
-JHtZRUxMT1d9WzMvNl0gTWVuZ3VuZGFoIFBST1RFWCBWMS41LjMuLi4iCiR7TkN9
-IgpjZCAvcm9vdApybSAtZiBmZWxpeC56aXAKd2dldCAtcSBodHRwczovL2dpdGh1
-Yi5jb20vc2FuZHlwYXJhZG94NTktYWx0L2ZlbG1vZC9yYXcvbWFpbi9GZWxpeHYx
-LjUuMy56aXAgLU8gZmVsaXguemlwCmNoZWNrX3N0YXR1cyAiRG93bmxvYWQgUHJv
-dGV4IgoKIyBTdGVwIDQ6IEV4dHJhY3QgYW5kIHNldHVwCmVjaG8gLWUgIiR7WUVM
-TE9XfVs0LzZdIE1lbmdla3N0cmFrIGRhbiBtZW55aWFwYWthbiBwYW5lbC4uLiR7
-TkN9IgpybSAtcmYgL3Jvb3QvcHRlcm9kYWN0eWwKdW56aXAgLW8gZmVsaXguemlw
-IC1kIC9yb290L3B0ZXJvZGFjdHlsCmNoZWNrX3N0YXR1cyAiRXh0cmFjdCBGaWxl
-IgoKY3AgLXJmVCAvcm9vdC9wdGVyb2RhY3R5bCAvdmFyL3d3dy9wdGVyb2RhY3R5
-bApjaG93biAtUiB3d3ctZGF0YTp3d3ctZGF0YSAvdmFyL3d3dy9wdGVyb2RhY3R5
-bApjaG1vZCAtUiA3NTUgL3Zhci93d3cvcHRlcm9kYWN0eWwKY2hlY2tfc3RhdHVz
-ICJTZXR1cCBmaWxlIHBlcm1pc3Npb25zIgoKIyBTdGVwIDU6IEJ1aWxkIGFzc2V0
-cwplY2hvIC1lICIke1lFTExPV31bNS82XSBNZW1idWF0ZCBhc3NldHMuLi4iCiR7
-TkN9IgpjZCAvdmFyL3d3dy9wdGVyb2RhY3R5bApzdWRvIC11IHd3dy1kYXRhIHlh
-cm4gYWRkIHJlYWN0LWZlYXRoZXIKY2hlY2tfc3RhdHVzICJJbnN0YWxsIHJlYWN0
-LWZlYXRoZXIiCgpwaHAgYXJ0aXNhbiBtaWdyYXRlIC0tZm9yY2UKY2hlY2tfc3Rh
-dHVzICJSdW4gZGF0YWJhc2UgbWlncmF0aW9ucyIKCnBocCBhcnRpc2FuIHZpZXc6
-Y2xlYXIKcGhwIGFydGlzYW4gY29uZmlnOmNsZWFyCnBocCBhcnRpc2FuIGNhY2hl
-OmNsZWFyCnBocCBhcnRpc2FuIHJvdXRlOmNsZWFyCmNoZWNrX3N0YXR1cyAiQ2xl
-YXIgY2FjaGVzIgoKZWNobyAtZSAiJHtZRUxMT1d9ICAgLT4gTWVtYnVhdCBwcm9k
-dWN0aW9uIGFzc2V0cy4uLiR7TkN9IgpzdWRvIC11IHd3dy1kYXRhIHlhcm4gYnVp
-bGQ6cHJvZHVjdGlvbgpjaGVja19zdGF0dXMgIkJ1aWxkIHByb2R1Y3Rpb24gYXNz
-ZXRzIgoKY2hvd24gLVIgd3d3LWRhdGE6d3d3LWRhdGEgc3RvcmFnZSBib290c3Ry
-YXAvY2FjaGUKY2htb2QgLVIgNzU1IHN0b3JhZ2UgYm9vdHN0cmFwL2NhY2hlCmNo
-ZWNrX3N0YXR1cyAiU2V0IGZpbmFsIHBlcm1pc3Npb25zIgoKIyBTdGVwIDY6IFJl
-c3RhcnQgc2VydmljZXMKZWNobyAtZSAiJHtZRUxMT1d9WzYvNl0gTWVyZXN0YXJ0
-IHNlcnZpY2VzLi4uJHtOQ30iCgojIENoZWNrIFBIUCB2ZXJzaW9uIGFuZCByZXN0
-YXJ0IGFwcHJvcHJpYXRlIHNlcnZpY2UKaWYgc3lzdGVtY3RsIGlzLWFjdGl2ZSAt
-cXVpZXQgcGhwOC4xLWZwbTsgdGhlbgogICAgc3lzdGVtY3RsIHJlc3RhcnQgcGhw
-OC4xLWZwbQogICAgY2hlY2tfc3RhdHVzICJSZXN0YXJ0IFBIUCA4LjEgRlBNIgpl
-bGlmIHN5c3RlbWN0bCBpcy1hY3RpdmUgLXF1aWV0IHBocDguMC1mcG07IHRoZW4K
-ICAgIHN5c3RlbWN0bCByZXN0YXJ0IHBocDguMC1mcG0KICAgIGNoZWNrX3N0YXR1
-cyAiUmVzdGFydCBQSFAgOC4wIEZQTSIKZWxzZQogICAgZWNobyAtZSAiJHtZRUxM
-T1d9WyFdIFRpZGFrIG1lbmVtdWthbiBzZXJ2aWNlIFBIUC1GUE0gOC4wLzguMSR7
-TkN9IgogICAgZWNobyAtZSAiJHtZRUxMT1d9U2lsYWthbiByZXN0YXJ0IHNlcnZp
-Y2UgUEhQLUZQTSBzZWNhcmEgbWFudWFsJHtOQ30iCmZpCgpzeXN0ZW1jdGwgcmVz
-dGFydCBuZ2lueApjaGVja19zdGF0dXMgIlJlc3RhcnQgTmdpbngiCgojIENsZWFu
-dXAKZWNobyAtZSAiJHtZRUxMT1d9TWVtYmVyc2lua2FuIGZpbGUgdGVtcG9yYXJ5
-Li4uJHtOQ30iCnJtIC1mIC9yb290L2ZlbGl4LnppcApybSAtcmYgL3Jvb3QvcHRl
-cm9kYWN0eWwKY2hlY2tfc3RhdHVzICJDbGVhbnVwIHRlbXBvcmFyeSBmaWxlcyIK
-CmVjaG8gIiIKZWNobyAtZSAiJHtHUkVFTn09PT09PT09PT09PT09PT09PT09PT09
-PT09PT09PT09PT09JHtOQ30iCmVjaG8gLWUgIiR7R1JFRU59ICAgICBJTlNUQUxM
-QVNJIEJFUkhBU0lMIERJTEFLVUFOISR7TkN9IgplY2hvIC1lICIke0dSRUVOfT09
-PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09JHtOQ30iCmVjaG8gIiIK
-ZWNobyAtZSAiJHtZRUxMT1d9UGFuZWwgdGVsYWggYmVyaGFzaWwgZGlpbnN0YWxs
-ISR7TkN9IgplY2hvICIiCmVjaG8gLWUgIiR7R1JFRU59SW5mb3JtYXNpOiR7TkN9
-IgplY2hvIC1lICLiiLggUGFuZWwgZGlpbnN0YWxsIGRpOiAke1lFTExPV30vdmFy
-L3d3dy9wdGVyb2RhY3R5bCROQyIKZWNobyAtZSAi4oi4IFVSTCBwYW5lbDogJHtZ
-RUxMT1d9aHR0cDovLyQoY3VybCAtcyBpZmNvbmYubWUpJE5DIgplY2hvIC1lICLi
-iLggVXNlciBkZWZhdWx0OiAke1lFTExPV30gYWRtaW4kTkMiCmVjaG8gLWUgIuKI
-uCBQYXNzd29yZCBkZWZhdWx0OiAke1lFTExPV30gcGFzc3dvcmQkTkMiCmVjaG8g
-IiIKZWNobyAtZSAiJHtZRUxMT1d9UGFzdGlrYW4gdW50dWs6JHtOQ30iCmVjaG8g
-IjEuIE1lbmdnYW50aSBwYXNzd29yZCBkZWZhdWx0IHNlZ2VyYSIKZWNobyAiMi4g
-TWVuZ29uZmlndXJhc2kgU1NML0hUVFBTIgplY2hvICIzLiBNZW5nYXR1ciBjcm9u
-IGpvYiB1bnR1ayBxdWV1ZSB3b3JrZXIiCmVjaG8gIiIKZWNobyAtZSAiJHtHUkVF
-Tn1UZXJpbWEga2FzaWggdGVsYWggbWVuZ2d1bmFrYW4gRmVsaXggUGFuZWwhJHtO
-Q30iCg=="
+# Exit on error
+set -e
 
-# Decode and execute
-eval "$(echo "$ENCODED_SCRIPT" | base64 -d)"
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+clear
+echo -e "${YELLOW}==========================================${NC}"
+echo -e "${GREEN}       Felix Panel Installer PROTEX v1.5.3       ${NC}"
+echo -e "${YELLOW}==========================================${NC}"
+echo ""
+echo "Script ini akan menginstall Protex Panel Anda."
+echo "JANGAN DI BAGIKAN GRATIS KODE INI.."
+echo ""
+echo -e "${YELLOW}Persiapan yang akan dilakukan:${NC}"
+echo "1. Update system packages"
+echo "2. Install dependencies (Node.js 16, Yarn, dll)"
+echo "3. Download PROTEX V1.5.3"
+echo "4. Extract dan setup panel"
+echo "5. Build assets dengan Yarn"
+echo "6. Restart services (nginx, php-fpm)"
+echo ""
+
+# Ask for confirmation
+read -p "Apakah Anda ingin melanjutkan instalasi? (Y/N): " -n 1 -r
+echo ""
+
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    echo -e "${RED}Instalasi dibatalkan.${NC}"
+    exit 1
+fi
+
+echo ""
+echo "[BOT] START INSTALL"
+
+# Update system
+echo -e "${YELLOW}[1/6] Memperbarui paket sistem...${NC}"
+apt update -y
+
+# Install dependencies
+echo -e "${YELLOW}[2/6] Menginstal dependensi...${NC}"
+apt install -y jq unzip curl git ca-certificates gnupg
+
+# Install Node.js 16
+echo -e "${YELLOW}   -> Menginstal Node.js 16...${NC}"
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+apt install -y nodejs
+
+# Install Yarn
+echo -e "${YELLOW}   -> Menginstal Yarn...${NC}"
+npm install -g yarn
+
+# Download Felix Panel
+echo -e "${YELLOW}[3/6] Mengunduh PROTEX V1.5.3...${NC}"
+cd /root
+rm -f felix.zip
+wget -q https://github.com/sandyparadox59-alt/felmod/raw/main/Felixv1.5.3.zip -O felix.zip
+
+# Extract files
+echo -e "${YELLOW}[4/6] Mengekstrak dan menyiapkan panel...${NC}"
+rm -rf /root/pterodactyl
+unzip -o felix.zip -d /root/pterodactyl
+
+# Copy to web directory
+cp -rfT /root/pterodactyl /var/www/pterodactyl
+
+# Set permissions
+chown -R www-data:www-data /var/www/pterodactyl
+chmod -R 755 /var/www/pterodactyl
+
+# Build assets
+echo -e "${YELLOW}[5/6] Membangun assets...${NC}"
+cd /var/www/pterodactyl
+sudo -u www-data yarn add react-feather
+
+# Run artisan commands
+php artisan migrate --force
+php artisan view:clear
+php artisan config:clear
+php artisan cache:clear
+php artisan route:clear
+
+# Build production assets
+echo -e "${YELLOW}   -> Membangun production assets...${NC}"
+sudo -u www-data yarn build:production
+
+# Set final permissions
+chown -R www-data:www-data storage bootstrap/cache
+chmod -R 755 storage bootstrap/cache
+
+# Restart services
+echo -e "${YELLOW}[6/6] Merestart services...${NC}"
+systemctl restart nginx
+systemctl restart php8.1-fpm || systemctl restart php8.0-fpm
+
+# Cleanup
+rm -f /root/felix.zip
+rm -rf /root/pterodactyl
+
+echo ""
+echo -e "${GREEN}==========================================${NC}"
+echo -e "${GREEN}     INSTALL PROTEX V1.5.3 SUCCESS!      ${NC}"
+echo -e "${GREEN}==========================================${NC}"
+echo ""
+echo -e "${YELLOW}Informasi Panel:${NC}"
+echo -e "• Panel diinstall di: /var/www/pterodactyl"
+echo -e "• URL panel: http://$(curl -s ifconfig.me)"
+echo ""
+echo -e "${YELLOW}Penting:${NC}"
+echo -e "• Konfigurasi SSL/HTTPS untuk keamanan"
+echo -e "• Atur cron job untuk queue worker"
